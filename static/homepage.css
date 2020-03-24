@@ -1,0 +1,13 @@
+.homepage_button{
+	border-radius: 8px;
+	font-family: sans-serif;
+	font-size: 30px;
+	background-color: var(--button);
+	margin-right: 10px;
+	padding: 25px;
+}
+.button_div {
+	margin-right: 15%; 
+	margin-left: 15%; 
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/list.css">
+	
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+	<script src = "https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+	<title>Graphs</title>
+</head>
+<body>
+	<center><h1>CBD App</h1></center>
+	<br>
+	<br>
+	<br>
+	<div class="flex_container">
+			<div class="circle_box">
+			<h3>Saved Lists</h3>
+ 
+				<div id="list_of_list">
+					<form method="post" enctype="multipart/form-data">
+								{{ list_of_files.hidden_tag() }}
+			    		<select name="df">
+
+			    			<form method="post" enctype="multipart/form-data" name="upload">
+			    					{% for file in data %}
+			    					<option value="{{file}}">
+			    						
+			    						<button>{{file}}</button>
+			    						
+			    					</option>
+			    					{% endfor %}
+			    				</select>
+			    			</form>
+			    		</select>
+			    	</form>
+			    				
+			    		
+				 <form method="post" enctype="multipart/form-data" name="load">
+				    		{{ load_graph.hidden_tag() }}
+
+				    			<button>Load Graph</button>
+			    	
+				</div>	
+			</div>
+		</div>
+
+		<div id="Graph"
+		class="circle_box">
+			
+			 <script type="text/javascript">
+         
+	        var graphs = {{graphJSON | safe}};
+	        
+	        Plotly.plot('Graph', graphs,{});        
+ 
+    		</script>
+			
+		</div>
+	</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.flex_container {
+	display: flex;
+}
+
+.left_div {
+
+}
+
+.circle_box {
+	border-radius: 30px;
+	font-family: sans-serif;
+	font-size: 30px;
+	background-color: var(--button);
+	margin-right: 10px;
+	padding: 25px; 
+}
+
+.table {
+	border-radius: 30px;
+	border-spacing: 0px;
+}
+.table td {
+	background-color: rgb(208, 230, 201);
+	border: 1px solid rgb(165, 173, 163);
+}
+
+.upload_button {
+	border-radius: 30px;
+	font-family: sans-serif;
+	font-size: 30px;
+	background-color: var(--button);
+	margin-right: 10px;
+	padding: 25px; 
+}
+
