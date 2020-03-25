@@ -69,6 +69,7 @@ def genelists():
 		
 	if load_table.validate_on_submit():
 		print(file_name)
+
 		f = '../cbdapp-1/'+str(file_name)
 		print(f)
 		with open(f) as csvDataFile:
@@ -167,7 +168,10 @@ def graph():
 
 	df['significant'] = significant
 	fig = px.scatter(df, x=df['logFC'], y=df['logpv'], color=df['significant'])
-	plot_obj = [fig]
+	plot_obj = fig
+	graph_new = dict(data=[dict(x=df['logFC'], y=df['logpv'], type='points')], layout=dict(title='volcano chart'))
+	
+	#plot_obj = graph_new
 	graphJSON = json.dumps(plot_obj, cls=plotly.utils.PlotlyJSONEncoder)
 	print(plot_obj)
 		
