@@ -54,7 +54,7 @@
          
 	        var graphs = {{graphJSON | safe}};
 	        
-	        Plotly.plot('Graph', graphs,{});        
+	        Plotly.plot('Graph', graphs.data, graphs.layout || {});        
  
     		</script>
 			
