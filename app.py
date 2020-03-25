@@ -3,7 +3,7 @@ from webui import WebUI
 from flask_wtf import Form
 from wtforms import FileField, SelectField, SubmitField
 import json
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 import os
 from parse import *
 import csv
